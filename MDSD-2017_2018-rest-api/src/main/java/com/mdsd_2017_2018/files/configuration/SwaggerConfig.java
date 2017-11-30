@@ -24,7 +24,7 @@ public class SwaggerConfig {
 				.apiInfo(new ApiInfo("MDSD-2017_2018-Rest-Api",
 						"This is a description for the rest interfaces fo uploading, downloading, deleting, listing and showing some files.",
 						"1.0", "", "Herval Bernice Nganya Nana, Oussema Mzoughi, Christian Lange, Ali Haouri", "", ""))
-				.pathProvider(new BasePathAwareRelativePathProvider("localhost", 8080));
+				.pathProvider(new BasePathAwareRelativePathProvider("34.240.188.226", 8080));
 	}
 
 	class BasePathAwareRelativePathProvider extends AbstractPathProvider {
