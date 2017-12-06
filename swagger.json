@@ -1,0 +1,678 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is the description of the REST-Api developed for the Project Model Driven Software Development. The enpoints of the this REST-service would be used by a mobile app developed with MD2.",
+    "version": "1.0.0",
+    "title": "MDSD 2017-2018 File Storage",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "nganyana@th-brandenburg.de"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "34.240.188.226:8081",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "File",
+      "description": "CRUD operations on a file"
+    },
+    {
+      "name": "Folder",
+      "description": "CRUD operations on a folder"
+    },
+    {
+      "name": "User",
+      "description": "Operations about user"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/{token}/{folderId}": {
+      "get": {
+        "tags": [
+          "Folder"
+        ],
+        "summary": "Get a folder",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "getFolder",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the folder to retrieve",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "description": "token of the current user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Folder"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Folder"
+        ],
+        "summary": "Create a folder",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "createFolder",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the folder to create",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "description": "token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "folder",
+            "description": "Store a folder in data storage",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FolderCreate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Folder"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Folder"
+        ],
+        "summary": "Edit a folder",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "editFolder",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the folder to edit",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "description": "token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "folder",
+            "description": "Edit a folder in data storage",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FolderCreate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Folder"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Folder"
+        ],
+        "summary": "Delete a folder",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "deleteFolder",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the folder to delete",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "description": "token of the current user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/{token}/{folderId}/files": {
+      "get": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Get a file",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "getFile",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the parent folder",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/File"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Upload a file",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "uploadFile",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the parent folder",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file",
+            "required": true,
+            "description": "The file to upload."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/File"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Edit a file name",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "editFile",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the parent folder",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "file",
+            "description": "Edit a file name in data storage",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FileEdit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Folder"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Delete a file",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "deleteFile",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the parent folder",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "file",
+            "description": "Delete a file in data storage",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FileDelete"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create user",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "createUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Created user object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "401": {
+            "description": "Bad request"
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Logs user into the system",
+        "description": "",
+        "operationId": "loginUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Created user object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLogin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/users/logout": {
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Logs out current logged in user session",
+        "description": "",
+        "operationId": "logoutUser",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "petstore_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "http://petstore.swagger.io/oauth/dialog",
+      "flow": "implicit",
+      "scopes": {
+        "write:pets": "modify pets in your account",
+        "read:pets": "read your pets"
+      }
+    },
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string",
+          "format": "uuid"
+        }
+      }
+    },
+    "UserLogin": {
+      "type": "object",
+      "required": [
+        "username",
+        "password"
+      ],
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Folder": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "uuid"
+        },
+        "parent": {
+          "type": "object",
+          "$ref": "#/definitions/Folder"
+        },
+        "sub_folders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "folder": {
+                "$ref": "#/definitions/Folder"
+              }
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "$ref": "#/definitions/File"
+              }
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "example": "MDSD"
+        },
+        "createDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "FolderCreate": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "MDSD"
+        }
+      }
+    },
+    "File": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "uuid"
+        },
+        "parent": {
+          "type": "object",
+          "$ref": "#/definitions/Folder"
+        },
+        "name": {
+          "type": "string",
+          "example": "swagger is the best.txt"
+        },
+        "ext": {
+          "type": "string",
+          "example": ".png"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "example": "1589654",
+          "description": "The size is in byte."
+        },
+        "uploadDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "FileEdit": {
+      "type": "object",
+      "required": [
+        "name",
+        "id",
+        "parent"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "uuid"
+        },
+        "parent": {
+          "type": "object",
+          "$ref": "#/definitions/Folder"
+        },
+        "name": {
+          "type": "string",
+          "example": "swagger is the best.txt"
+        }
+      }
+    },
+    "FileDelete": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "uuid"
+        }
+      }
+    }
+  }
+}
