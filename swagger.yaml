@@ -1,0 +1,478 @@
+swagger: '2.0'
+info:
+  description: >-
+    This is the description of the REST-Api developed for the Project Model
+    Driven Software Development. The enpoints of the this REST-service would be
+    used by a mobile app developed with MD2. 
+  version: 1.0.0
+  title: MDSD 2017-2018 File Storage
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: nganyana@th-brandenburg.de
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: '34.240.188.226:8080'
+basePath: '/api/{token}'
+tags:
+  - name: File
+    description: CRUD operations on a file
+  - name: Folder
+    description: CRUD operations on a folder
+  - name: User
+    description: Operations about user
+schemes:
+  - http
+paths:
+  '/{folderId}':
+    get:
+      tags:
+        - Folder
+      summary: Get a folder
+      description: This can only be done by the logged in user.
+      operationId: getFolder
+      produces:
+        - application/json
+      parameters:
+        - name: folderId
+          in: path
+          description: Get a folder from the data storage
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/Folder'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+    post:
+      tags:
+        - Folder
+      summary: Create a folder
+      description: This can only be done by the logged in user.
+      operationId: createFolder
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: folder
+          description: Store a folder in data storage
+          required: true
+          schema:
+            $ref: '#/definitions/FolderCreate'
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/Folder'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+    put:
+      tags:
+        - Folder
+      summary: Edit a folder
+      description: This can only be done by the logged in user.
+      operationId: editFolder
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: folder
+          description: Edit a folder in data storage
+          required: true
+          schema:
+            $ref: '#/definitions/FolderCreate'
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/Folder'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+    delete:
+      tags:
+        - Folder
+      summary: Delete a folder
+      description: This can only be done by the logged in user.
+      operationId: deleteFolder
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+  '/{folderId}/files':
+    get:
+      tags:
+        - File
+      summary: Upload a file
+      description: This can only be done by the logged in user.
+      operationId: getFile
+      produces:
+        - application/json
+      parameters:
+        - name: folderId
+          in: path
+          description: Get a file from the data storage
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/File'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+    post:
+      tags:
+        - File
+      summary: Upload a file
+      description: This can only be done by the logged in user.
+      operationId: uploadFile
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: file
+          type: file
+          description: The file to upload.
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/File'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+    put:
+      tags:
+        - File
+      summary: Edit a file name
+      description: This can only be done by the logged in user.
+      operationId: editFile
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: file
+          description: Edit a file name in data storage
+          required: true
+          schema:
+            $ref: '#/definitions/FileEdit'
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: '#/definitions/Folder'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+    delete:
+      tags:
+        - File
+      summary: Delete a file
+      description: This can only be done by the logged in user.
+      operationId: deleteFile
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: file
+          description: Delete a file in data storage
+          required: true
+          schema:
+            $ref: '#/definitions/FileEdit'
+      responses:
+        '200':
+          description: Successful operation
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+  /users:
+    post:
+      tags:
+        - User
+      summary: Create user
+      description: This can only be done by the logged in user.
+      operationId: createUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Created user object
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        default:
+          description: successful operation
+  /users/login:
+    get:
+      tags:
+        - User
+      summary: Logs user into the system
+      description: ''
+      operationId: loginUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: username
+          in: query
+          description: The user name for login
+          required: true
+          type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+          headers:
+            X-Rate-Limit:
+              type: integer
+              format: int32
+              description: calls per hour allowed by the user
+            X-Expires-After:
+              type: string
+              format: date-time
+              description: date in UTC when token expires
+        '400':
+          description: Invalid username/password supplied
+  /users/logout:
+    get:
+      tags:
+        - User
+      summary: Logs out current logged in user session
+      description: ''
+      operationId: logoutUser
+      produces:
+        - application/xml
+        - application/json
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+  '/users/{username}':
+    get:
+      tags:
+        - User
+      summary: Get user by user name
+      description: ''
+      operationId: getUserByName
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: 'The name that needs to be fetched. Use user1 for testing. '
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/User'
+        '400':
+          description: Invalid username supplied
+        '404':
+          description: User not found
+    put:
+      tags:
+        - User
+      summary: Updated user
+      description: This can only be done by the logged in user.
+      operationId: updateUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: name that need to be updated
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Updated user object
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '400':
+          description: Invalid user supplied
+        '404':
+          description: User not found
+    delete:
+      tags:
+        - User
+      summary: Delete user
+      description: This can only be done by the logged in user.
+      operationId: deleteUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: The name that needs to be deleted
+          required: true
+          type: string
+      responses:
+        '400':
+          description: Invalid username supplied
+        '404':
+          description: User not found
+securityDefinitions:
+  petstore_auth:
+    type: oauth2
+    authorizationUrl: 'http://petstore.swagger.io/oauth/dialog'
+    flow: implicit
+    scopes:
+      'write:pets': modify pets in your account
+      'read:pets': read your pets
+  api_key:
+    type: apiKey
+    name: api_key
+    in: header
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      username:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      userStatus:
+        type: integer
+        format: int32
+        description: User Status
+    xml:
+      name: User
+  Folder:
+    type: object
+    properties:
+      id:
+        type: string
+        example: uuid
+      parent:
+        type: object
+        $ref: '#/definitions/Folder'
+      sub_folders:
+        type: array
+        items:
+          type: object
+          properties:
+            folder:
+              $ref: '#/definitions/Folder'
+      files:
+        type: array
+        items:
+          type: object
+          properties:
+            file:
+              $ref: '#/definitions/File'
+      name:
+        type: string
+        example: MDSD
+      createDate:
+        type: string
+        format: date-time
+      url:
+        type: string
+  FolderCreate:
+    type: object
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        example: MDSD
+  File:
+    type: object
+    properties:
+      id:
+        type: string
+        example: uuid
+      parent:
+        type: object
+        $ref: '#/definitions/Folder'
+      name:
+        type: string
+        example: swagger is the best.txt
+      ext:
+        type: string
+        example: .png
+      size:
+        type: integer
+        format: int64
+        example: '1589654'
+        description: The size is in byte.
+      uploadDate:
+        type: string
+        format: date-time
+      url:
+        type: string
+  FileEdit:
+    type: object
+    required:
+      - name
+      - id
+      - parent
+    properties:
+      id:
+        type: string
+        example: uuid
+      parent:
+        type: object
+        $ref: '#/definitions/Folder'
+      name:
+        type: string
+        example: swagger is the best.txt
+  FileDelete:
+    type: object
+    required:
+      - id
+      - parent
+    properties:
+      id:
+        type: string
+        example: uuid
+      parent:
+        type: object
+        $ref: '#/definitions/Folder'
