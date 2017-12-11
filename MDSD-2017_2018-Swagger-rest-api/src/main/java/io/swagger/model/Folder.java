@@ -18,7 +18,7 @@ import org.joda.time.DateTime;
 /**
  * Folder
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
 public class Folder   {
   private String id = null;
@@ -44,7 +44,7 @@ public class Folder   {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "uuid", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }

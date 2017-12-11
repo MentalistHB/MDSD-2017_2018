@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * FileDelete
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
 public class FileDelete   {
   private String id = null;
@@ -26,7 +26,7 @@ public class FileDelete   {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "uuid", required = true, value = "")
+  @ApiModelProperty(required = true, value = "")
   public String getId() {
     return id;
   }

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.model.Folder;
 
 
 
@@ -12,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * User
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
 public class User   {
   private String id = null;
@@ -20,6 +21,8 @@ public class User   {
   private String username = null;
 
   private String password = null;
+
+  private Folder home = null;
 
   private String token = null;
 
@@ -77,6 +80,24 @@ public class User   {
     this.password = password;
   }
 
+  public User home(Folder home) {
+    this.home = home;
+    return this;
+  }
+
+   /**
+   * Get home
+   * @return home
+  **/
+  @ApiModelProperty(value = "")
+  public Folder getHome() {
+    return home;
+  }
+
+  public void setHome(Folder home) {
+    this.home = home;
+  }
+
   public User token(String token) {
     this.token = token;
     return this;
@@ -108,12 +129,13 @@ public class User   {
     return Objects.equals(this.id, user.id) &&
         Objects.equals(this.username, user.username) &&
         Objects.equals(this.password, user.password) &&
+        Objects.equals(this.home, user.home) &&
         Objects.equals(this.token, user.token);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, username, password, token);
+    return Objects.hash(id, username, password, home, token);
   }
 
   @Override
@@ -124,6 +146,7 @@ public class User   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    home: ").append(toIndentedString(home)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("}");
     return sb.toString();

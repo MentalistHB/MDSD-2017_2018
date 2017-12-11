@@ -19,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
 @Api(value = "{token}", description = "the {token} API")
 public interface TokenApi {
@@ -92,6 +92,7 @@ public interface TokenApi {
     @ApiOperation(value = "Edit a file name", notes = "This can only be done by the logged in user.", response = Folder.class, tags={ "File", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Successful operation", response = Folder.class),
+        @ApiResponse(code = 400, message = "Bad request", response = Folder.class),
         @ApiResponse(code = 401, message = "Unauthorized", response = Folder.class),
         @ApiResponse(code = 404, message = "Not found", response = Folder.class) })
     @RequestMapping(value = "/{token}/{folderId}/files",

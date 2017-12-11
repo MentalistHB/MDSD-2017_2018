@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
 @Controller
 public class UsersApiController implements UsersApi {
@@ -41,7 +41,11 @@ public class UsersApiController implements UsersApi {
         return new ResponseEntity<User>(HttpStatus.OK);
     }
 
-    public ResponseEntity<Void> logoutUser() {
+    public ResponseEntity<Void> logoutUser(
+@ApiParam(value = "Token of the current user",required=true ) @PathVariable("token") String token
+
+
+) {
         // do some magic!
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
