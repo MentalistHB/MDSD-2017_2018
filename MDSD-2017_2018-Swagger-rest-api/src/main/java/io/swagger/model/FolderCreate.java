@@ -5,35 +5,34 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.Folder;
 
 
 
 
 /**
- * FolderSubFolders
+ * FolderCreate
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-07T12:32:58.843+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
 
-public class FolderSubFolders   {
-  private Folder folder = null;
+public class FolderCreate   {
+  private String name = null;
 
-  public FolderSubFolders folder(Folder folder) {
-    this.folder = folder;
+  public FolderCreate name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get folder
-   * @return folder
+   * Get name
+   * @return name
   **/
-  @ApiModelProperty(value = "")
-  public Folder getFolder() {
-    return folder;
+  @ApiModelProperty(example = "MDSD", required = true, value = "")
+  public String getName() {
+    return name;
   }
 
-  public void setFolder(Folder folder) {
-    this.folder = folder;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -45,21 +44,21 @@ public class FolderSubFolders   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FolderSubFolders folderSubFolders = (FolderSubFolders) o;
-    return Objects.equals(this.folder, folderSubFolders.folder);
+    FolderCreate folderCreate = (FolderCreate) o;
+    return Objects.equals(this.name, folderCreate.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(folder);
+    return Objects.hash(name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FolderSubFolders {\n");
+    sb.append("class FolderCreate {\n");
     
-    sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

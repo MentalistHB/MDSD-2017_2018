@@ -5,34 +5,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.model.Folder;
 
 
 
 
 /**
- * FolderCreate
+ * FolderSubFolders
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-07T12:32:58.843+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T16:10:26.464+01:00")
 
-public class FolderCreate   {
-  private String name = null;
+public class FolderSubFolders   {
+  private Folder folder = null;
 
-  public FolderCreate name(String name) {
-    this.name = name;
+  public FolderSubFolders folder(Folder folder) {
+    this.folder = folder;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get folder
+   * @return folder
   **/
-  @ApiModelProperty(example = "MDSD", required = true, value = "")
-  public String getName() {
-    return name;
+  @ApiModelProperty(value = "")
+  public Folder getFolder() {
+    return folder;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setFolder(Folder folder) {
+    this.folder = folder;
   }
 
 
@@ -44,21 +45,21 @@ public class FolderCreate   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FolderCreate folderCreate = (FolderCreate) o;
-    return Objects.equals(this.name, folderCreate.name);
+    FolderSubFolders folderSubFolders = (FolderSubFolders) o;
+    return Objects.equals(this.folder, folderSubFolders.folder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name);
+    return Objects.hash(folder);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FolderCreate {\n");
+    sb.append("class FolderSubFolders {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
     sb.append("}");
     return sb.toString();
   }
