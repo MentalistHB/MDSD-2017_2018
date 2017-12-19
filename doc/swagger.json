@@ -239,6 +239,15 @@
             "description": "Id of the parent folder",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "file",
+            "description": "Get a file from data storage",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FileDelete"
+            }
           }
         ],
         "responses": {
@@ -426,7 +435,7 @@
             "description": "Created user object",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/UserLogin"
             }
           }
         ],
