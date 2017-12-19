@@ -145,7 +145,8 @@ public interface TokenApi {
 
 
 ,
-@ApiParam(value = "Id of the parent folder",required=true ) @PathVariable("folderId") String folderId
+@ApiParam(value = "Id of the parent folder",required=true ) @PathVariable("folderId") String folderId,
+@ApiParam(value = "Get a file from data storage", required = true) @RequestBody FileDelete file
 
 
 );
