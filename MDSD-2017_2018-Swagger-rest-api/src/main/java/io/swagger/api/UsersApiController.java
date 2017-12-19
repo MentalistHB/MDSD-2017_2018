@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class UsersApiController implements UsersApi {
 
 	public ResponseEntity<User> createUser(
-			@ApiParam(value = "Created user object", required = true) @RequestBody User body) {
+			@ApiParam(value = "Created user object", required = true) @RequestBody UserLogin body) {
 
 		// do some magic!
 		// new User() has to be set with the right user object

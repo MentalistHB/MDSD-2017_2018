@@ -22,7 +22,7 @@ public interface UsersApi {
 	@RequestMapping(value = "/users", produces = { "application/json" }, method = RequestMethod.POST)
 	ResponseEntity<User> createUser(
 
-			@ApiParam(value = "Created user object", required = true) @RequestBody User body
+			@ApiParam(value = "Created user object", required = true) @RequestBody UserLogin body
 
 	);
 

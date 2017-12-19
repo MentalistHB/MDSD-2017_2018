@@ -62,7 +62,8 @@ public class TokenApiController implements TokenApi {
 
 	public ResponseEntity<File> getFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
-			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId) {
+			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
+			@ApiParam(value = "Get a file from data storage", required = true) @RequestBody FileDelete file) {
 		// do some magic!
 		return new ResponseEntity<File>(new File(), HttpStatus.OK);
 	}
