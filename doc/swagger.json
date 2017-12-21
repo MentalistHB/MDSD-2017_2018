@@ -446,8 +446,8 @@
               "$ref": "#/definitions/User"
             }
           },
-          "401": {
-            "description": "Bad request"
+          "400": {
+            "description": "Bad request: in case the input data are in the worng format or the user already exists."
           }
         }
       }
@@ -481,11 +481,8 @@
               "$ref": "#/definitions/User"
             }
           },
-          "400": {
-            "description": "Bad request"
-          },
           "403": {
-            "description": "Forbidden"
+            "description": "Forbidden: in case the credentials are wrong."
           }
         }
       }
@@ -514,8 +511,8 @@
           "200": {
             "description": "successful operation"
           },
-          "400": {
-            "description": "Bad request"
+          "404": {
+            "description": "NotFoundException: in case the token is not found => the user was not connected."
           }
         }
       }
@@ -543,7 +540,8 @@
       "properties": {
         "id": {
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "username": {
           "type": "string"
@@ -557,7 +555,8 @@
         },
         "token": {
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         }
       }
     },
@@ -581,7 +580,8 @@
       "properties": {
         "id": {
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "parent": {
           "type": "object",
@@ -639,7 +639,8 @@
       "properties": {
         "id": {
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "parent": {
           "type": "object",
@@ -678,7 +679,8 @@
       "properties": {
         "id": {
           "type": "string",
-          "format": "uuid"
+          "format": "uuid",
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "parent": {
           "type": "object",
