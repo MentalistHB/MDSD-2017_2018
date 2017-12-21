@@ -8,6 +8,7 @@ import io.swagger.annotations.*;
 import java.util.UUID;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,25 +25,22 @@ public class UsersApiController implements UsersApi {
 	private UserService userService;
 
 	public ResponseEntity<User> createUser(
-			@ApiParam(value = "Created user object", required = true) @RequestBody UserLogin body) {
+			@ApiParam(value = "Created user object", required = true) @RequestBody @Valid UserLogin body) {
 
-		// do some magic!
-		// new User() has to be set with the right user object
-		return new ResponseEntity<User>(new User(), HttpStatus.OK);
+		User user = userService.create(body);
+		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 
 	public ResponseEntity<User> loginUser(
 			@ApiParam(value = "Created user object", required = true) @RequestBody UserLogin body) {
 
-		// do some magic!
-		// new User() has to be set with the right user object
-		return new ResponseEntity<User>(new User(), HttpStatus.OK);
+		User user = userService.login(body);
+		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 
 	public ResponseEntity<Void> logoutUser(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token) {
 
-		System.out.println(UUID.randomUUID());
 		userService.logout(UUID.fromString(token));
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}

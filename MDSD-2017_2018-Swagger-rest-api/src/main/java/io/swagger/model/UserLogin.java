@@ -1,6 +1,10 @@
 package io.swagger.model;
 
 import java.util.Objects;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -9,8 +13,13 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
 public class UserLogin {
+
+	@NotEmpty(message = "The username must not be empty")
+	@Length(min = 6, max = 50)
 	private String username = null;
 
+	@NotEmpty(message = "The password must not be empty")
+	@Length(min = 8, max = 50)
 	private String password = null;
 
 	private boolean encryption;
@@ -46,6 +55,11 @@ public class UserLogin {
 	 **/
 	@ApiModelProperty(required = true, value = "")
 	public String getPassword() {
+		
+		if(encryption) {
+			// decrypt
+		}
+		
 		return password;
 	}
 
