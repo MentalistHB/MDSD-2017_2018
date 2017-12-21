@@ -12,8 +12,8 @@ import io.swagger.model.Folder;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import org.joda.time.DateTime;
 
 /**
  * Folder
@@ -38,7 +38,7 @@ public class Folder implements Serializable {
 
 	private String name = null;
 
-	private DateTime createDate = null;
+	private Date createDate = null;
 
 	private String url = null;
 
@@ -147,7 +147,7 @@ public class Folder implements Serializable {
 		this.name = name;
 	}
 
-	public Folder createDate(DateTime createDate) {
+	public Folder createDate(Date createDate) {
 		this.createDate = createDate;
 		return this;
 	}
@@ -158,11 +158,11 @@ public class Folder implements Serializable {
 	 * @return createDate
 	 **/
 	@ApiModelProperty(value = "")
-	public DateTime getCreateDate() {
+	public Date getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(DateTime createDate) {
+	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
 
