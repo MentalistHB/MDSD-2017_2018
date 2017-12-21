@@ -2,12 +2,13 @@ package io.swagger.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.UUID;
 
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.Folder;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -18,22 +19,22 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class User implements Serializable {
-	
+
 	private static final long serialVersionUID = -3661990521330716588L;
 
 	@Id
-	private UUID id = null;
+	private String id = null;
 
 	private String username = null;
 
 	private String password = null;
 
-	@OneToOne
-	private Folder home = null;
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private Folder home;
 
-	private UUID token = null;
+	private String token = null;
 
-	public User id(UUID id) {
+	public User id(String id) {
 		this.id = id;
 		return this;
 	}
@@ -44,11 +45,11 @@ public class User implements Serializable {
 	 * @return id
 	 **/
 	@ApiModelProperty(value = "")
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -109,7 +110,7 @@ public class User implements Serializable {
 		this.home = home;
 	}
 
-	public User token(UUID token) {
+	public User token(String token) {
 		this.token = token;
 		return this;
 	}
@@ -120,11 +121,11 @@ public class User implements Serializable {
 	 * @return token
 	 **/
 	@ApiModelProperty(value = "")
-	public UUID getToken() {
+	public String getToken() {
 		return token;
 	}
 
-	public void setToken(UUID token) {
+	public void setToken(String token) {
 		this.token = token;
 	}
 

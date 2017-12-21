@@ -25,7 +25,7 @@ public class UserService {
 	@Autowired
 	private FolderRepository folderRepository;
 
-	public void logout(UUID token) {
+	public void logout(String token) {
 
 		// get user by token
 		User user = userRepository.findByToken(token);
@@ -49,33 +49,33 @@ public class UserService {
 		}
 
 		Folder home = new Folder();
-		home.setId(UUID.randomUUID());
+		home.setId(UUID.randomUUID().toString());
 		home.setCreateDate(new Date());
 		home.setName(userLogin.getUsername());
 		home.setParent(null);
 		home.setUrl(ApiConstant.s3_server + "/" + userLogin.getUsername());
-		
+
 		home = folderRepository.save(home);
-		
+
 		User user = new User();
-		user.setId(UUID.randomUUID());
+		user.setId(UUID.randomUUID().toString());
 		user.setUsername(userLogin.getUsername());
 		user.setPassword(userLogin.getPassword());
 		user.setHome(home);
-		
-		return userRepository.save(user);
+
+		return userRepository.saveAndFlush(user);
 	}
 
 	public User login(UserLogin userLogin) {
-		
+
 		User actual = userRepository.findByUsernameAndPassword(userLogin.getUsername(), userLogin.getPassword());
 
 		if (actual == null) {
 			throw new ForbiddenException();
 		}
-		
-		actual.setToken(UUID.randomUUID());
-		
-		return userRepository.save(actual);
+
+		actual.setToken(UUID.randomUUID().toString());
+
+		return userRepository.saveAndFlush(actual);
 	}
 }

@@ -1,7 +1,6 @@
 package io.swagger.model;
 
 import java.util.Objects;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -26,7 +25,7 @@ public class Folder implements Serializable {
 	private static final long serialVersionUID = -454018730743763379L;
 
 	@Id
-	private UUID id = null;
+	private String id = null;
 
 	private Folder parent = null;
 
@@ -42,7 +41,7 @@ public class Folder implements Serializable {
 
 	private String url = null;
 
-	public Folder id(UUID id) {
+	public Folder id(String id) {
 		this.id = id;
 		return this;
 	}
@@ -53,11 +52,11 @@ public class Folder implements Serializable {
 	 * @return id
 	 **/
 	@ApiModelProperty(value = "")
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

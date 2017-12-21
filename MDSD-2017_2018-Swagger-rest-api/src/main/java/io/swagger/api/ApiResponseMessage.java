@@ -15,12 +15,13 @@ public class ApiResponseMessage {
 	int code;
 	String type;
 	String message;
-	
-	public ApiResponseMessage(){}
-	
-	public ApiResponseMessage(int code, String message){
+
+	public ApiResponseMessage() {
+	}
+
+	public ApiResponseMessage(int code, String message) {
 		this.code = code;
-		switch(code){
+		switch (code) {
 		case ERROR:
 			setType("error");
 			break;

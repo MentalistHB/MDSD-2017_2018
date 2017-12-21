@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: swagger-spring
 Implementation-Version: 1.0.0
-Built-By: Ali-Haouari
+Built-By: herval
 Implementation-Vendor-Id: io.swagger
 Build-Jdk: 1.8.0_151
 Created-By: Maven Integration for Eclipse

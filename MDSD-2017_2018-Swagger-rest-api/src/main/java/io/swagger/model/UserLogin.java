@@ -55,11 +55,11 @@ public class UserLogin {
 	 **/
 	@ApiModelProperty(required = true, value = "")
 	public String getPassword() {
-		
-		if(encryption) {
+
+		if (encryption) {
 			// decrypt
 		}
-		
+
 		return password;
 	}
 

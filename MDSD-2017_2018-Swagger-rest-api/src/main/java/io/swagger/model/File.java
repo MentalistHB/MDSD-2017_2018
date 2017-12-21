@@ -2,7 +2,6 @@ package io.swagger.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +12,7 @@ public class File implements Serializable {
 	private static final long serialVersionUID = 3078938945094929253L;
 
 	@Id
-	private UUID id;
+	private String id;
 	private Folder parent;
 	private String name;
 	private String ext;
@@ -23,7 +22,7 @@ public class File implements Serializable {
 	public File() {
 	}
 
-	public File(UUID id, Folder parent, String name, String ext, Date uploadDate, String url) {
+	public File(String id, Folder parent, String name, String ext, Date uploadDate, String url) {
 		this.id = id;
 		this.parent = parent;
 		this.name = name;
@@ -32,11 +31,11 @@ public class File implements Serializable {
 		this.url = url;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

@@ -5,10 +5,11 @@ package io.swagger.api;
 public class NotFoundException extends ApiException {
 
 	private static final long serialVersionUID = -8000903005649088467L;
-	
+
 	@SuppressWarnings("unused")
 	private int code;
-	public NotFoundException (int code, String msg) {
+
+	public NotFoundException(int code, String msg) {
 		super(code, msg);
 		this.code = code;
 	}

@@ -5,8 +5,6 @@ import io.swagger.model.UserLogin;
 import io.swagger.service.UserService;
 import io.swagger.annotations.*;
 
-import java.util.UUID;
-
 import javax.inject.Inject;
 import javax.validation.Valid;
 
@@ -41,7 +39,7 @@ public class UsersApiController implements UsersApi {
 	public ResponseEntity<Void> logoutUser(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token) {
 
-		userService.logout(UUID.fromString(token));
+		userService.logout(token);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
