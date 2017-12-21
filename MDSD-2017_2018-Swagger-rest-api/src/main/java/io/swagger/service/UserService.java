@@ -2,29 +2,28 @@ package io.swagger.service;
 
 import java.util.UUID;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.ws.rs.BadRequestException;
+import javax.ws.rs.NotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import io.swagger.model.User;
 import io.swagger.repository.UserRepository;
 
-@Named
+@Service
 public class UserService {
 
-	@Inject
+	@Autowired
 	private UserRepository userRepository;
 
 	public void logout(UUID token) {
 
-		System.out.println(token);
-		
 		// get user by token
 		User user = userRepository.findByToken(token);
 
 		// check if the user exists
 		if (user == null) {
-			throw new BadRequestException();
+			throw new NotFoundException();
 		}
 
 		user.setToken(null);
