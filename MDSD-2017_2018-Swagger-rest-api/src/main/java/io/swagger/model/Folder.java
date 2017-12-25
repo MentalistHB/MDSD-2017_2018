@@ -2,7 +2,9 @@ package io.swagger.model;
 
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -27,12 +29,12 @@ public class Folder implements Serializable {
 	@Id
 	private String id = null;
 
-	private Folder parent = null;
+	private String parent = null;
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "parent", cascade = CascadeType.ALL)
 	private List<Folder> subFolders = new ArrayList<Folder>();
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "parent", cascade = CascadeType.ALL)
 	private List<File> files = new ArrayList<File>();
 
 	private String name = null;
@@ -40,6 +42,8 @@ public class Folder implements Serializable {
 	private Date createDate = null;
 
 	private String url = null;
+
+	private String path = null;
 
 	public Folder id(String id) {
 		this.id = id;
@@ -60,7 +64,7 @@ public class Folder implements Serializable {
 		this.id = id;
 	}
 
-	public Folder parent(Folder parent) {
+	public Folder parent(String parent) {
 		this.parent = parent;
 		return this;
 	}
@@ -71,11 +75,11 @@ public class Folder implements Serializable {
 	 * @return parent
 	 **/
 	@ApiModelProperty(value = "")
-	public Folder getParent() {
+	public String getParent() {
 		return parent;
 	}
 
-	public void setParent(Folder parent) {
+	public void setParent(String parent) {
 		this.parent = parent;
 	}
 
@@ -184,6 +188,19 @@ public class Folder implements Serializable {
 		this.url = url;
 	}
 
+	/**
+	 * Get path
+	 * 
+	 * @return path
+	 **/
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
 	@Override
 	public boolean equals(java.lang.Object o) {
 		if (this == o) {
@@ -229,5 +246,14 @@ public class Folder implements Serializable {
 			return "null";
 		}
 		return o.toString().replace("\n", "\n    ");
+	}
+
+	public void addFile(File file) {
+		for (File tmp : files) {
+			if (tmp.getId().equals(file.getId()) || tmp.getName().equals(file.getName())) {
+				return;
+			}
+		}
+		files.add(file);
 	}
 }

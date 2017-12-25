@@ -1,12 +1,17 @@
 package io.swagger.api;
 
 import io.swagger.model.FolderCreate;
+import io.swagger.service.FileService;
 import io.swagger.model.Folder;
 import io.swagger.model.File;
 import io.swagger.model.FileDelete;
 import io.swagger.model.FileEdit;
 
 import io.swagger.annotations.*;
+
+import java.io.IOException;
+
+import javax.inject.Inject;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +25,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class TokenApiController implements TokenApi {
+
+	@Inject
+	private FileService fileService;
 
 	public ResponseEntity<Folder> createFolder(
 			@ApiParam(value = "Id of the folder to create", required = true) @PathVariable("folderId") String folderId,
@@ -78,9 +86,11 @@ public class TokenApiController implements TokenApi {
 	public ResponseEntity<File> uploadFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
-			@ApiParam(value = "file detail") @RequestPart("file") MultipartFile file) {
-		// do some magic!
-		return new ResponseEntity<File>(new File(), HttpStatus.OK);
+			@ApiParam(value = "file detail") @RequestPart("file") MultipartFile file) throws IOException {
+
+		File uploadedFile = fileService.upload(token, folderId, file);
+
+		return new ResponseEntity<File>(uploadedFile, HttpStatus.OK);
 	}
 
 }

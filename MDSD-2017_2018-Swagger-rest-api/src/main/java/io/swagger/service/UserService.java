@@ -54,6 +54,7 @@ public class UserService {
 		home.setName(userLogin.getUsername());
 		home.setParent(null);
 		home.setUrl(ApiConstant.s3_server + "/" + userLogin.getUsername());
+		home.setPath(userLogin.getUsername() + "/");
 
 		home = folderRepository.save(home);
 

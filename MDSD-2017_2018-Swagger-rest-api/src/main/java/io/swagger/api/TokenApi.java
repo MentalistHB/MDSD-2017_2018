@@ -7,6 +7,9 @@ import io.swagger.model.FileDelete;
 import io.swagger.model.FileEdit;
 
 import io.swagger.annotations.*;
+
+import java.io.IOException;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -144,6 +147,6 @@ public interface TokenApi {
 
 			,
 
-			@ApiParam(value = "file detail") @RequestPart("file") MultipartFile file);
+			@ApiParam(value = "file detail") @RequestPart("file") MultipartFile file) throws IOException;
 
 }

@@ -13,22 +13,24 @@ public class File implements Serializable {
 
 	@Id
 	private String id;
-	private Folder parent;
+	private String parent;
 	private String name;
 	private String ext;
 	private Date uploadDate;
 	private String url;
+	private String path;
 
 	public File() {
 	}
 
-	public File(String id, Folder parent, String name, String ext, Date uploadDate, String url) {
+	public File(String id, String parent, String name, String ext, Date uploadDate, String url, String path) {
 		this.id = id;
 		this.parent = parent;
 		this.name = name;
 		this.ext = ext;
 		this.uploadDate = uploadDate;
 		this.url = url;
+		this.path = path;
 	}
 
 	public String getId() {
@@ -39,11 +41,11 @@ public class File implements Serializable {
 		this.id = id;
 	}
 
-	public Folder getParent() {
+	public String getParent() {
 		return parent;
 	}
 
-	public void setParent(Folder parent) {
+	public void setParent(String parent) {
 		this.parent = parent;
 	}
 
@@ -53,6 +55,8 @@ public class File implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+		String[] split = name.split("\\.", -1);
+		ext = split[split.length - 1];
 	}
 
 	public String getExt() {
@@ -79,4 +83,11 @@ public class File implements Serializable {
 		this.url = url;
 	}
 
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
 }
