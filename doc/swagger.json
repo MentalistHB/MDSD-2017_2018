@@ -13,7 +13,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "http://34.252.181.41:8081",
+  "host": "34.238.158.85:8081",
   "basePath": "/api",
   "tags": [
     {
@@ -122,6 +122,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request: in case a folder with this name already exists."
           }
         }
       },
@@ -215,56 +218,6 @@
       }
     },
     "/{token}/{folderId}/files": {
-      "get": {
-        "tags": [
-          "File"
-        ],
-        "summary": "Get a file",
-        "description": "This can only be done by the logged in user.",
-        "operationId": "getFile",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "token",
-            "in": "path",
-            "description": "Token of the current user",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "folderId",
-            "in": "path",
-            "description": "Id of the parent folder",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "file",
-            "description": "Get a file from data storage",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/FileDelete"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "schema": {
-              "$ref": "#/definitions/File"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "404": {
-            "description": "Not found"
-          }
-        }
-      },
       "post": {
         "tags": [
           "File"
@@ -308,6 +261,59 @@
               "$ref": "#/definitions/File"
             }
           },
+          "403": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request: in case the size is greather than 30Mb."
+          }
+        }
+      }
+    },
+    "/{token}/{folderId}/files/{fileId}": {
+      "get": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Get a file",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "getFile",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Token of the current user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "path",
+            "description": "Id of the parent folder",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "fileId",
+            "in": "path",
+            "description": "Id of the file",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/File"
+            }
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -338,6 +344,13 @@
             "name": "folderId",
             "in": "path",
             "description": "Id of the parent folder",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "fileId",
+            "in": "path",
+            "description": "Id of the file",
             "required": true,
             "type": "string"
           },
@@ -395,13 +408,11 @@
             "type": "string"
           },
           {
-            "in": "body",
-            "name": "file",
-            "description": "Delete a file in data storage",
+            "name": "fileId",
+            "in": "path",
+            "description": "Id of the file",
             "required": true,
-            "schema": {
-              "$ref": "#/definitions/FileDelete"
-            }
+            "type": "string"
           }
         ],
         "responses": {
@@ -585,7 +596,7 @@
         },
         "parent": {
           "type": "object",
-          "$ref": "#/definitions/Folder"
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "sub_folders": {
           "type": "array",
@@ -619,6 +630,10 @@
         },
         "url": {
           "type": "string"
+        },
+        "path": {
+          "type": "string",
+          "example": "user1/documents/myFolder"
         }
       }
     },
@@ -643,8 +658,8 @@
           "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "parent": {
-          "type": "object",
-          "$ref": "#/definitions/Folder"
+          "type": "string",
+          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
         },
         "name": {
           "type": "string",
@@ -666,6 +681,10 @@
         },
         "url": {
           "type": "string"
+        },
+        "path": {
+          "type": "string",
+          "example": "user1/documents/myFile.txt"
         }
       }
     },
@@ -673,15 +692,9 @@
       "type": "object",
       "required": [
         "name",
-        "id",
         "parent"
       ],
       "properties": {
-        "id": {
-          "type": "string",
-          "format": "uuid",
-          "example": "95bd6b42-96e6-4f0b-a313-59daba63ca41"
-        },
         "parent": {
           "type": "object",
           "$ref": "#/definitions/Folder"
