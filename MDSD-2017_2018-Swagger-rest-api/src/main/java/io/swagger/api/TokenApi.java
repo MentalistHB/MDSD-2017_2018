@@ -3,7 +3,6 @@ package io.swagger.api;
 import io.swagger.model.FolderCreate;
 import io.swagger.model.Folder;
 import io.swagger.model.File;
-import io.swagger.model.FileDelete;
 import io.swagger.model.FileEdit;
 
 import io.swagger.annotations.*;
