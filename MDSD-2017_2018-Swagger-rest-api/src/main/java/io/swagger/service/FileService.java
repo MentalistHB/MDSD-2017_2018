@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.mdsd_2017_2018.s3_transactions.service.FileTransaction;
 
+import io.swagger.ApiConstant;
 import io.swagger.model.File;
 import io.swagger.model.Folder;
 import io.swagger.model.User;
@@ -51,7 +52,7 @@ public class FileService {
 		}
 
 		// check the size of the file
-		if (multipartFile.getSize() >= 30000000) {
+		if (multipartFile.getSize() >= ApiConstant.max_file_size) {
 			throw new BadRequestException();
 		}
 

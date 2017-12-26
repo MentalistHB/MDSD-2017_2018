@@ -12,6 +12,8 @@ import io.swagger.annotations.*;
 import java.io.IOException;
 
 import javax.inject.Inject;
+import javax.servlet.annotation.MultipartConfig;
+import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringCodegen", date = "2017-12-11T17:49:32.673+01:00")
 
+@MultipartConfig(maxFileSize = 1)
 @Controller
 public class TokenApiController implements TokenApi {
 
@@ -86,7 +89,7 @@ public class TokenApiController implements TokenApi {
 	public ResponseEntity<File> uploadFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
-			@ApiParam(value = "file detail") @RequestPart("file") MultipartFile file) throws IOException {
+			@ApiParam(value = "file detail") @RequestPart("file") @Valid MultipartFile file) throws IOException {
 
 		File uploadedFile = fileService.upload(token, folderId, file);
 
