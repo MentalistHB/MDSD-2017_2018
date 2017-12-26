@@ -12,7 +12,6 @@ import io.swagger.annotations.*;
 import java.io.IOException;
 
 import javax.inject.Inject;
-import javax.servlet.annotation.MultipartConfig;
 import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
