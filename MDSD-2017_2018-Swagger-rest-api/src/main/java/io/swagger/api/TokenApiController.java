@@ -2,6 +2,7 @@ package io.swagger.api;
 
 import io.swagger.model.FolderCreate;
 import io.swagger.service.FileService;
+import io.swagger.service.FolderService;
 import io.swagger.model.Folder;
 import io.swagger.model.File;
 import io.swagger.model.FileDelete;
@@ -31,19 +32,22 @@ public class TokenApiController implements TokenApi {
 
 	@Inject
 	private FileService fileService;
+	@Inject
+	private FolderService folderService;
 
 	public ResponseEntity<Folder> createFolder(
 			@ApiParam(value = "Id of the folder to create", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Store a folder in data storage", required = true) @RequestBody FolderCreate folder) {
-		// do some magic!
-		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
+
+		Folder actual = folderService.create(token, folderId, folder);
+		return new ResponseEntity<Folder>(actual, HttpStatus.OK);
 	}
 
 	public ResponseEntity<Void> deleteFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
-			@ApiParam(value = "Delete a file in data storage", required = true) @RequestBody FileDelete file) {
+			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId) {
 		// do some magic!
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
@@ -58,6 +62,7 @@ public class TokenApiController implements TokenApi {
 	public ResponseEntity<Folder> editFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
+			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId,
 			@ApiParam(value = "Edit a file name in data storage", required = true) @RequestBody FileEdit file) {
 		// do some magic!
 		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
@@ -74,7 +79,7 @@ public class TokenApiController implements TokenApi {
 	public ResponseEntity<File> getFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
-			@ApiParam(value = "Get a file from data storage", required = true) @RequestBody FileDelete file) {
+			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId) {
 		// do some magic!
 		return new ResponseEntity<File>(new File(), HttpStatus.OK);
 	}

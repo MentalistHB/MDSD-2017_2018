@@ -45,16 +45,14 @@ public interface TokenApi {
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = Void.class),
 			@ApiResponse(code = 401, message = "Unauthorized", response = Void.class),
 			@ApiResponse(code = 404, message = "Not found", response = Void.class) })
-	@RequestMapping(value = "/{token}/{folderId}/files", produces = {
+	@RequestMapping(value = "/{token}/{folderId}/files/{fileId}", produces = {
 			"application/json" }, method = RequestMethod.DELETE)
 	ResponseEntity<Void> deleteFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token
 
-			, @ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId
+			, @ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
 
-			,
-
-			@ApiParam(value = "Delete a file in data storage", required = true) @RequestBody FileDelete file
+			@ApiParam(value = "id of the file", required = true) @PathVariable("fileId") String fileId
 
 	);
 
@@ -77,11 +75,14 @@ public interface TokenApi {
 			@ApiResponse(code = 400, message = "Bad request", response = Folder.class),
 			@ApiResponse(code = 401, message = "Unauthorized", response = Folder.class),
 			@ApiResponse(code = 404, message = "Not found", response = Folder.class) })
-	@RequestMapping(value = "/{token}/{folderId}/files", produces = { "application/json" }, method = RequestMethod.PUT)
+	@RequestMapping(value = "/{token}/{folderId}/files/{fileId}", produces = {
+			"application/json" }, method = RequestMethod.PUT)
 	ResponseEntity<Folder> editFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token
 
-			, @ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId
+			, @ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
+
+			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId
 
 			,
 
@@ -111,12 +112,14 @@ public interface TokenApi {
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = File.class),
 			@ApiResponse(code = 401, message = "Unauthorized", response = File.class),
 			@ApiResponse(code = 404, message = "Not found", response = File.class) })
-	@RequestMapping(value = "/{token}/{folderId}/files", produces = { "application/json" }, method = RequestMethod.GET)
+	@RequestMapping(value = "/{token}/{folderId}/files/{fileId}", produces = {
+			"application/json" }, method = RequestMethod.GET)
 	ResponseEntity<File> getFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token
 
 			, @ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
-			@ApiParam(value = "Get a file from data storage", required = true) @RequestBody FileDelete file
+
+			@ApiParam(value = "id of the file", required = true) @PathVariable("fileId") String fileId
 
 	);
 
