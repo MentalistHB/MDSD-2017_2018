@@ -13,7 +13,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "34.238.158.85:8081",
+  "host": "34.238.158.85:8080",
   "basePath": "/api",
   "tags": [
     {
@@ -67,8 +67,8 @@
               "$ref": "#/definitions/Folder"
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -117,8 +117,8 @@
               "$ref": "#/definitions/Folder"
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -170,8 +170,8 @@
               "$ref": "#/definitions/Folder"
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -208,8 +208,8 @@
           "200": {
             "description": "Successful operation"
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -262,7 +262,7 @@
             }
           },
           "403": {
-            "description": "Unauthorized"
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -314,8 +314,8 @@
               "$ref": "#/definitions/File"
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -374,8 +374,8 @@
           "400": {
             "description": "Bad request"
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -419,8 +419,8 @@
           "200": {
             "description": "Successful operation"
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
