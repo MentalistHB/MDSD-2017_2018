@@ -256,4 +256,13 @@ public class Folder implements Serializable {
 		}
 		files.add(file);
 	}
+
+	public boolean hasSubFolder(String name) {
+		for (Folder folder : subFolders) {
+			if (folder.getName().equals(name)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
