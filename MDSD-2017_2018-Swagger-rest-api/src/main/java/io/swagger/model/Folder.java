@@ -3,8 +3,11 @@ package io.swagger.model;
 import java.util.Objects;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -55,7 +58,9 @@ public class Folder implements Serializable {
 	 * 
 	 * @return id
 	 **/
-	@ApiModelProperty(value = "")
+	@ApiModelProperty(value = "null")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+
 	public String getId() {
 		return id;
 	}
@@ -259,10 +264,10 @@ public class Folder implements Serializable {
 
 	public boolean hasSubFolder(String name) {
 		for (Folder folder : subFolders) {
-			if (folder.getName().equals(name)) {
+	///		if (folder.getName().equals(name)) {
 				return true;
 			}
-		}
+		//}
 		return false;
 	}
 }

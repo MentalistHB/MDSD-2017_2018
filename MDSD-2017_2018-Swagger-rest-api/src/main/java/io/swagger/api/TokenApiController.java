@@ -10,15 +10,17 @@ import io.swagger.model.FileEdit;
 import io.swagger.annotations.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
-import javax.servlet.annotation.MultipartConfig;
-import javax.validation.Valid;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -38,7 +40,7 @@ public class TokenApiController implements TokenApi {
 	public ResponseEntity<Folder> createFolder(
 			@ApiParam(value = "Id of the folder to create", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token,
-			@ApiParam(value = "Store a folder in data storage", required = true) @RequestBody FolderCreate folder) {
+			@ApiParam(value = "Store a folder in data storage", required = true) @ModelAttribute FolderCreate folder) {
 
 		Folder actual = folderService.create(token, folderId, folder);
 		return new ResponseEntity<Folder>(actual, HttpStatus.OK);
@@ -55,7 +57,7 @@ public class TokenApiController implements TokenApi {
 	public ResponseEntity<Void> deleteFolder(
 			@ApiParam(value = "Id of the folder to delete", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token) {
-		// do some magic!
+		// do some agic!
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
@@ -65,6 +67,12 @@ public class TokenApiController implements TokenApi {
 			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId,
 			@ApiParam(value = "Edit a file name in data storage", required = true) @RequestBody FileEdit file) {
 		// do some magic!
+          try {
+			fileService.edit(token, folderId, fileId, file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
 	}
 
@@ -73,6 +81,8 @@ public class TokenApiController implements TokenApi {
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Edit a folder in data storage", required = true) @RequestBody FolderCreate folder) {
 		// do some magic!
+		folderService.edit(token, folderId, folder);
+
 		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
 	}
 
@@ -81,6 +91,11 @@ public class TokenApiController implements TokenApi {
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId) {
 		// do some magic!
+		
+		
+	  
+
+		fileService.getFile(token, folderId, fileId);
 		return new ResponseEntity<File>(new File(), HttpStatus.OK);
 	}
 
@@ -88,13 +103,29 @@ public class TokenApiController implements TokenApi {
 			@ApiParam(value = "Id of the folder to retrieve", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token) {
 		// do some magic!
-		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
+        HttpHeaders headers = new HttpHeaders();
+
+	   	 List<Folder> folder = null;
+		try {
+			folder=	folderService.getFolder(folderId ,token);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+		System.out.println(folder);
+	    if(folder != null) return new ResponseEntity<>(new  Folder(), headers,HttpStatus.OK);
+	    
+	      else return new ResponseEntity<>(headers, HttpStatus.EXPECTATION_FAILED); 
+			
+	   	
 	}
 
 	public ResponseEntity<File> uploadFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
-			@ApiParam(value = "file detail") @RequestPart("file") @Valid MultipartFile file) throws IOException {
+			@ApiParam(value = "file detail") @RequestPart("file")  MultipartFile file) throws IOException {
 
 		File uploadedFile = fileService.upload(token, folderId, file);
 

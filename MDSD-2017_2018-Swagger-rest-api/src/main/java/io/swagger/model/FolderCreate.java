@@ -21,7 +21,7 @@ public class FolderCreate {
 	 * 
 	 * @return name
 	 **/
-	@ApiModelProperty(example = "MDSD", required = true, value = "")
+	@ApiModelProperty(example = "", required = true, value = "")
 	public String getName() {
 		return name;
 	}

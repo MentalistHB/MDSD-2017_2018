@@ -27,7 +27,7 @@ public interface TokenApi {
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = Folder.class),
 			@ApiResponse(code = 401, message = "Unauthorized", response = Folder.class),
 			@ApiResponse(code = 404, message = "Not found", response = Folder.class) })
-	@RequestMapping(value = "/{token}/{folderId}", produces = { "application/json" }, method = RequestMethod.POST)
+	@RequestMapping(value = "/{token}/{folderId}", produces = { "application/json;text/plain;charset=UTF-8"}, method = RequestMethod.POST)
 	ResponseEntity<Folder> createFolder(
 			@ApiParam(value = "Id of the folder to create", required = true) @PathVariable("folderId") String folderId
 
@@ -35,7 +35,7 @@ public interface TokenApi {
 
 			,
 
-			@ApiParam(value = "Store a folder in data storage", required = true) @RequestBody FolderCreate folder
+			@ApiParam(value = "Store a folder in data storage", required = true) @RequestBody(required = false) FolderCreate folder
 
 	);
 
