@@ -2,7 +2,9 @@ package io.swagger.service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import javax.ws.rs.BadRequestException;
@@ -18,6 +20,7 @@ import com.mdsd_2017_2018.s3_transactions.service.FileTransaction;
 
 import io.swagger.ApiConstant;
 import io.swagger.model.File;
+import io.swagger.model.FileEdit;
 import io.swagger.model.Folder;
 import io.swagger.model.User;
 import io.swagger.repository.FileRepository;
@@ -68,7 +71,7 @@ public class FileService {
 		file.setParent(folder.getId().toString());
 		file.setUploadDate(new Date());
 		file.setPath(folder.getPath() + multipartFile.getOriginalFilename());
-		String url = folder.getUrl() + "/" + multipartFile.getOriginalFilename();
+		String url = folder.getUrl() + multipartFile.getOriginalFilename();
 		file.setUrl(url);
 
 		file = fileRepository.save(file);
@@ -83,6 +86,82 @@ public class FileService {
 		fileTransaction.upload(file.getPath(), inputStream, size);
 
 		return file;
+	}
+
+	public File get(String token, String folderId, String fileId) {
+
+		User user = userRepository.findByToken(token);
+		if (user == null) {
+			throw new ForbiddenException();
+		}
+		Folder folder = folderRepository.findOne(folderId);
+
+		if (folder == null) {
+			throw new NotFoundException();
+		}
+		File file = fileRepository.findOne(fileId);
+		if (file == null) {
+			throw new NotFoundException();
+		}
+
+		return file;
+	}
+
+	public Folder edit(String token, String folderId, String fileId, FileEdit fileEdit) {
+
+		User user = userRepository.findByToken(token);
+		if (user == null) {
+			throw new ForbiddenException();
+		}
+		Folder folder = folderRepository.findOne(folderId);
+
+		if (folder == null) {
+			throw new NotFoundException();
+		}
+		File file = fileRepository.findOne(fileId);
+		if (file == null) {
+			throw new NotFoundException();
+		}
+
+		String new_path = folder.getPath() + fileEdit.getName();
+		String new_url = folder.getUrl() + fileEdit.getName();
+
+		fileTransaction = new FileTransaction();
+		fileTransaction.rename(file.getPath(), new_path);
+
+		file.setName(fileEdit.getName());
+		file.setPath(new_path);
+		file.setUrl(new_url);
+
+		fileRepository.save(file);
+
+		return folderRepository.findOne(folderId);
+	}
+
+	public List<File> findAllSubFromRoot(String rootId) {
+		List<File> files = new ArrayList<>();
+
+		if (rootId == null) {
+			return null;
+		}
+
+		Folder root = folderRepository.findOne(rootId);
+		if (root == null) {
+			return null;
+		}
+
+		return getAllSub(root, files);
+
+	}
+
+	public List<File> getAllSub(Folder root, List<File> actual_list) {
+
+		actual_list.addAll(root.getFiles());
+		for (Folder sub_folder : root.getSubFolders()) {
+			getAllSub(sub_folder, actual_list);
+		}
+
+		return actual_list;
 	}
 
 }

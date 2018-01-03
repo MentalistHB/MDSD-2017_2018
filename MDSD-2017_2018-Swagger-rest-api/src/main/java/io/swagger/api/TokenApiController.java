@@ -62,32 +62,36 @@ public class TokenApiController implements TokenApi {
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId,
-			@ApiParam(value = "Edit a file name in data storage", required = true) @RequestBody FileEdit file) {
-		// do some magic!
-		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
+			@ApiParam(value = "Edit a file name in data storage", required = true) @Valid @RequestBody FileEdit file) {
+
+		Folder folder = fileService.edit(token, folderId, fileId, file);
+		return new ResponseEntity<Folder>(folder, HttpStatus.OK);
 	}
 
 	public ResponseEntity<Folder> editFolder(
 			@ApiParam(value = "Id of the folder to edit", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Edit a folder in data storage", required = true) @RequestBody FolderCreate folder) {
-		// do some magic!
-		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
+
+		Folder actual = folderService.edit(folderId, token, folder);
+		return new ResponseEntity<Folder>(actual, HttpStatus.OK);
 	}
 
 	public ResponseEntity<File> getFile(
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId) {
-		// do some magic!
-		return new ResponseEntity<File>(new File(), HttpStatus.OK);
+
+		File file = fileService.get(token, folderId, fileId);
+		return new ResponseEntity<File>(file, HttpStatus.OK);
 	}
 
 	public ResponseEntity<Folder> getFolder(
 			@ApiParam(value = "Id of the folder to retrieve", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token) {
-		// do some magic!
-		return new ResponseEntity<Folder>(new Folder(), HttpStatus.OK);
+
+		Folder folder = folderService.get(folderId, token);
+		return new ResponseEntity<Folder>(folder, HttpStatus.OK);
 	}
 
 	public ResponseEntity<File> uploadFile(
