@@ -39,6 +39,25 @@ public class FolderService {
 
 	private FileTransaction fileTransaction;
 
+	public void deleteFolder(String token, String folderId){
+		User user = userRepository.findByToken(token);
+
+		if (user == null) {
+			throw new ForbiddenException();
+		}
+		Folder folder = folderRepository.findOne(folderId);
+
+		if (folder == null) {
+			throw new NotFoundException();
+		}
+		if (folder.getParent() == null){
+			throw new ForbiddenException();
+		}
+		fileTransaction = new FileTransaction();
+		fileTransaction.delete(folder.getPath());
+		folderRepository.delete(folder);
+	}
+	
 	public Folder create(String token, String folderId, FolderCreate folderCreate) {
 
 		User user = userRepository.findByToken(token);
