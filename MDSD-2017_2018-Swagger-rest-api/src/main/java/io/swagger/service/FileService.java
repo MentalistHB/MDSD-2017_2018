@@ -40,6 +40,29 @@ public class FileService {
 
 	private FileTransaction fileTransaction;
 
+	
+	public void deleteFile(String token, String folderId, String fileId){
+		User user = userRepository.findByToken(token);
+
+		if (user == null) {
+			throw new ForbiddenException();
+		}
+		Folder folder = folderRepository.findOne(folderId);
+
+		if (folder == null) {
+			throw new NotFoundException();
+		}
+		
+		File file = fileRepository.findOne(fileId);
+		if (file == null) {
+			throw new NotFoundException();
+		}
+		System.out.println("file = " + file.toString());
+		fileTransaction = new FileTransaction();
+		fileTransaction.delete(file.getPath());
+		fileRepository.delete(file);
+	}
+	
 	public File upload(String token, String folderId, MultipartFile multipartFile) throws IOException {
 
 		User user = userRepository.findByToken(token);
