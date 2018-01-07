@@ -41,7 +41,7 @@ public class FileService {
 	private FileTransaction fileTransaction;
 
 	
-	public void deleteFile(String token, String folderId, String fileId){
+	public void delete(String token, String folderId, String fileId){
 		User user = userRepository.findByToken(token);
 
 		if (user == null) {
