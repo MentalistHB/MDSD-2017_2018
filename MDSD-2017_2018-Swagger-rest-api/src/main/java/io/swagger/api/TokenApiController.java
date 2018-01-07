@@ -46,14 +46,14 @@ public class TokenApiController implements TokenApi {
 			@ApiParam(value = "Token of the current user", required = true) @PathVariable("token") String token,
 			@ApiParam(value = "Id of the parent folder", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "Id of the file", required = true) @PathVariable("fileId") String fileId) {
-		fileService.deleteFile(token, folderId, fileId);
+		fileService.delete(token, folderId, fileId);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
 	public ResponseEntity<Void> deleteFolder(
 			@ApiParam(value = "Id of the folder to delete", required = true) @PathVariable("folderId") String folderId,
 			@ApiParam(value = "token of the current user", required = true) @PathVariable("token") String token) {
-		folderService.deleteFolder(token, folderId);
+		folderService.delete(token, folderId);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 

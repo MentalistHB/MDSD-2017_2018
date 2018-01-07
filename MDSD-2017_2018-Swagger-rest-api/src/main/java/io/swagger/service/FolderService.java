@@ -39,7 +39,7 @@ public class FolderService {
 
 	private FileTransaction fileTransaction;
 
-	public void deleteFolder(String token, String folderId){
+	public void delete(String token, String folderId){
 		User user = userRepository.findByToken(token);
 
 		if (user == null) {
