@@ -60,7 +60,8 @@ public class FileService {
 		}
 
 		// check if the file already exists
-		File file = fileRepository.findByName(multipartFile.getOriginalFilename());
+		File file = fileRepository.findByNameAndParent(multipartFile.getOriginalFilename(), folderId);
+
 		if (file == null) {
 			file = new File();
 			file.setId(UUID.randomUUID().toString());
@@ -69,6 +70,7 @@ public class FileService {
 		// generate and save the file entity
 		file.setName(multipartFile.getOriginalFilename());
 		file.setParent(folder.getId().toString());
+		file.setSize(multipartFile.getSize());
 		file.setUploadDate(new Date());
 		file.setPath(folder.getPath() + multipartFile.getOriginalFilename());
 		String url = folder.getUrl() + multipartFile.getOriginalFilename();

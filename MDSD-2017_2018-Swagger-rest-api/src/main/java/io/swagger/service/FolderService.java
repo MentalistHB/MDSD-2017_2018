@@ -203,4 +203,43 @@ public class FolderService {
 		}
 	}
 
+	public List<Folder> findAllSubFolderFromParent(String rootId) {
+		List<Folder> sub_folders = new ArrayList<>();
+
+		if (rootId == null) {
+			return null;
+		}
+
+		Folder root = folderRepository.findOne(rootId);
+		if (root == null) {
+			return null;
+		}
+
+		return getAllSub(root, sub_folders);
+
+	}
+
+	public List<Folder> getAllSub(Folder root, List<Folder> actual_list) {
+
+		actual_list.addAll(root.getSubFolders());
+		for (Folder sub_folder : root.getSubFolders()) {
+			getAllSub(sub_folder, actual_list);
+		}
+
+		return actual_list;
+	}
+
+	public boolean match_user_folder(User user, Folder folder) {
+		List<Folder> folders = findAllSubFolderFromParent(user.getHome().getId());
+
+		for (Folder sub_folder : folders) {
+			if (sub_folder.getId().equals(folder.getId())) {
+				return true;
+			}
+		}
+
+		return false;
+
+	}
+
 }

@@ -16,6 +16,7 @@ public class File implements Serializable {
 	private String parent;
 	private String name;
 	private String ext;
+	private long size;
 	private Date uploadDate;
 	private String url;
 	private String path;
@@ -23,11 +24,13 @@ public class File implements Serializable {
 	public File() {
 	}
 
-	public File(String id, String parent, String name, String ext, Date uploadDate, String url, String path) {
+	public File(String id, String parent, String name, String ext, long size, Date uploadDate, String url,
+			String path) {
 		this.id = id;
 		this.parent = parent;
 		this.name = name;
 		this.ext = ext;
+		this.size = size;
 		this.uploadDate = uploadDate;
 		this.url = url;
 		this.path = path;
@@ -65,6 +68,14 @@ public class File implements Serializable {
 
 	public void setExt(String ext) {
 		this.ext = ext;
+	}
+
+	public long getSize() {
+		return size;
+	}
+
+	public void setSize(long size) {
+		this.size = size;
 	}
 
 	public Date getUploadDate() {
