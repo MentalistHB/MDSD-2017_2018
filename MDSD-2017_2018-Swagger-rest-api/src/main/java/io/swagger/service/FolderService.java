@@ -53,9 +53,20 @@ public class FolderService {
 		if (folder.getParent() == null){
 			throw new ForbiddenException();
 		}
-		fileTransaction = new FileTransaction();
-		fileTransaction.delete(folder.getPath());
-		folderRepository.delete(folder);
+		System.out.println("Folderid = " + folder.getId());
+		boolean matched = matchUserFolder(user, folder);
+		if(matched){
+			
+			//System.out.println("FolderId = " + folder.getId());
+			fileTransaction = new FileTransaction();
+			fileTransaction.delete(folder.getPath());
+//			folderRepository.delete(folder);
+			folderRepository.delete(folder.getId());
+//			System.out.println("Folder gelöscht");
+		} else {
+			throw new ForbiddenException();
+		}
+		
 	}
 	
 	public Folder create(String token, String folderId, FolderCreate folderCreate) {
@@ -247,7 +258,6 @@ public class FolderService {
 
 		return actual_list;
 	}
-
 	public boolean match_user_folder(User user, Folder folder) {
 		List<Folder> folders = findAllSubFolderFromParent(user.getHome().getId());
 
@@ -259,6 +269,19 @@ public class FolderService {
 
 		return false;
 
+	}
+	public boolean matchUserFolder(User user, Folder folder){
+		Folder root = folder;
+		while(root.getParent() != null){
+			System.out.println("before call Repo: " + root.getId());
+			System.out.println("root.getParent = " + root.getParent());
+			root = folderRepository.findOne(root.getParent());
+			System.out.println("after call Repo: " + root.getId());
+		}
+		if (root.getId().equals(user.getHome().getId())){
+			return true;
+		}
+		return false;
 	}
 
 }

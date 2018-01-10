@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.ForbiddenException;
 import javax.ws.rs.NotFoundException;
@@ -37,11 +38,14 @@ public class FileService {
 	private FolderRepository folderRepository;
 	@Autowired
 	private FileRepository fileRepository;
+	@Inject
+	private FolderService folderService;
+
+
 
 	private FileTransaction fileTransaction;
 
-	
-	public void delete(String token, String folderId, String fileId){
+	public void delete(String token, String folderId, String fileId) {
 		User user = userRepository.findByToken(token);
 
 		if (user == null) {
@@ -57,12 +61,18 @@ public class FileService {
 		if (file == null) {
 			throw new NotFoundException();
 		}
-		System.out.println("file = " + file.toString());
-		fileTransaction = new FileTransaction();
-		fileTransaction.delete(file.getPath());
-		fileRepository.delete(file);
+		if (!file.getParent().equals(folder.getId())){
+			throw new NotFoundException();
+		}
+		if (folderService.matchUserFolder(user, folder)) {
+			fileTransaction = new FileTransaction();
+			fileTransaction.delete(file.getPath());
+			fileRepository.delete(file);
+		} else {
+			throw new ForbiddenException();
+		}
 	}
-	
+
 	public File upload(String token, String folderId, MultipartFile multipartFile) throws IOException {
 
 		User user = userRepository.findByToken(token);
