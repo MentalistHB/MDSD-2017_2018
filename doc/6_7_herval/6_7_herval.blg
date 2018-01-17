@@ -3,55 +3,154 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: 6_7_herval.aux
 The style file: apalike.bst
 Database file #1: quellen.bib
-Warning--string name "smartbear" is undefined
---line 10 of file quellen.bib
-Warning--string name "swagger" is undefined
---line 11 of file quellen.bib
-I was expecting a `,' or a `}'---line 11 of file quellen.bib
- :  title = swagger 
- :                  - World's Most Popular API Framework,
-I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in swagger
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1020 of file apalike.bst
 Warning--empty year in swagger
-You've used 1 entry,
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+Too many commas in name 1 of "Timo Greifenberg, Katrin Hölldobler , Carsten Kolassa, Markus Look, Pedram Mir Seyed Nazari, Klaus Müller, Antonio Navarro Perez, Dimitri Plotnikov, Dirk Reiss, Alexander Roth, Bernhard Rumpe, Martin Schindler and Andreas Wortmann" for entry timo2015_3_1
+while executing---line 1095 of file apalike.bst
+You've used 3 entries,
             1935 wiz_defined-function locations,
-            472 strings with 3686 characters,
-and the built_in function-call counts, 196 in all, are:
-= -- 17
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 13
-:= -- 31
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 1
+            481 strings with 4359 characters,
+and the built_in function-call counts, 871 in all, are:
+= -- 84
+> -- 33
+< -- 3
++ -- 15
+- -- 10
+* -- 59
+:= -- 165
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 2
 cite$ -- 4
-duplicate$ -- 10
-empty$ -- 19
-format.name$ -- 0
-if$ -- 36
-int.to.chr$ -- 1
+duplicate$ -- 36
+empty$ -- 56
+format.name$ -- 17
+if$ -- 160
+int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 6
-num.names$ -- 0
-pop$ -- 10
+newline$ -- 17
+num.names$ -- 9
+pop$ -- 20
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 20
 quote$ -- 0
-skip$ -- 7
+skip$ -- 25
 stack$ -- 0
-substring$ -- 13
-swap$ -- 0
+substring$ -- 40
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
-warning$ -- 2
-while$ -- 0
+type$ -- 18
+warning$ -- 1
+while$ -- 6
 width$ -- 0
-write$ -- 8
-(There was 1 error message)
+write$ -- 35
+(There were 54 error messages)

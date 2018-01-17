@@ -1,6 +1,24 @@
 \begin{thebibliography}{}
 
-\bibitem[swa, ]{swagger}
+\bibitem[SmartBear, ]{swagger}
+SmartBear.
+\newblock Swagger - world's most popular api framework.
 
+\bibitem[Timo~Greifenberg and Wortmann, 2015a]{timo2015}
+Timo~Greifenberg, Katrin~Hölldobler, C. K. M. L. P. M. S. N. K. M. A. N. P. D.
+  P. D. R. A. R. B. R. M.~S. and Wortmann, A. (2015a).
+\newblock {\em A Comparison of Mechanisms for Integrating Handwritten and
+  Generated Code for Object-Oriented Programming Languages}.
+\newblock Software Engineering, RWTH Aachen University, Institute for Building
+  Services and Energy Design, TU Braunschweig.
+
+\bibitem[Timo~Greifenberg and Wortmann, 2015b]{timo2015_3_1}
+Timo~Greifenberg, Katrin~Hölldobler, C. K. M. L. P. M. S. N. K. M. A. N. P. D.
+  P. D. R. A. R. B. R. M.~S. and Wortmann, A. (2015b).
+\newblock {\em A Comparison of Mechanisms for Integrating Handwritten and
+  Generated Code for Object-Oriented Programming Languages, Page 76, Chapter
+  3.1}.
+\newblock Software Engineering, RWTH Aachen University, Institute for Building
+  Services and Energy Design, TU Braunschweig.
 
 \end{thebibliography}
