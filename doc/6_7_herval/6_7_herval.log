@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  17 JAN 2018 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  19 JAN 2018 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -574,8 +574,6 @@ Overfull \hbox (14.20761pt too wide) in paragraph at lines 121--122
  [][] 
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¶ in font ptmr7t!
 <paketstruktur.png, id=14, 536.0025pt x 918.43124pt>
 File: paketstruktur.png Graphic file (type png)
  <use paketstruktur.png>
@@ -621,7 +619,7 @@ c}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on 6_7_herval.pdf (4 pages, 285391 bytes).
+Output written on 6_7_herval.pdf (4 pages, 285402 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
