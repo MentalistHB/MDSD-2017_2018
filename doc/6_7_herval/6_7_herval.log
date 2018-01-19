@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  17 JAN 2018 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  17 JAN 2018 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,6 +440,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--32
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+
+Underfull \hbox (badness 1845) in paragraph at lines 36--37
+\OT1/ptm/m/n/10 w[]ahrend der Durchf[]uhrung dieses Pro-jekts nicht
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 
@@ -453,8 +458,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 54--55
-\OT1/ptm/m/n/10 YAML-Datei gespe-ichert. In diesem pro-jekt
+Underfull \hbox (badness 1264) in paragraph at lines 54--55
+\OT1/ptm/m/n/10 YAML-Datei gespe-ichert. In diesem Pro-jekt
  []
 
 
@@ -463,23 +468,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
  []
 
 
-Underfull \hbox (badness 7595) in paragraph at lines 58--59
-\OT1/ptm/m/n/10 Beschreibung der Quell-code an-hand Swag-
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ptm/m/n/10 Beschreibung der Quell-code an-hand des
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 58--59
-\OT1/ptm/m/n/10 ger Co-den-gen gener-iert. Swag-ger Code-gen
+Underfull \hbox (badness 1616) in paragraph at lines 58--59
+\OT1/ptm/m/n/10 zu erzeu-gen. F[]ur dieses Pro-jekt wurde ein
  []
 
 
-Underfull \hbox (badness 6691) in paragraph at lines 58--59
-\OT1/ptm/m/n/10 mier-sprachen (Back-end sowie Fron-tend) zu
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 60--61
-[]\OT1/ptm/m/n/10 Danach wur-den in dem gener-ierten Spring-
+Underfull \hbox (badness 3668) in paragraph at lines 58--59
+\OT1/ptm/m/n/10 Spring-Projekt gew[]ahlt, da den angestrebten
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -488,35 +488,35 @@ Underfull \hbox (badness 3884) in paragraph at lines 60--61
 
 
 ]
+Underfull \hbox (badness 3884) in paragraph at lines 60--61
+[]\OT1/ptm/m/n/10 Danach wur-den in dem gener-ierten Spring-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\OT1/ptm/m/n/10 Projekt Maven-Abh[]angigkeiten hinzugef[]ugt.
+ []
+
+
+Underfull \hbox (badness 7308) in paragraph at lines 69--70
+\OT1/ptm/m/n/10 Der Rest-Service k[]onnte noch Funk-tion-alit[]aten
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no „ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no Ÿ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¶ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
 
-Underfull \hbox (badness 1708) in paragraph at lines 76--78
-\OT1/ptm/m/n/10 berg and Wort-mann, 2015a) ein paar Meth-o-den
+Underfull \hbox (badness 1102) in paragraph at lines 76--78
+\OT1/ptm/m/n/10 ich nach der Beschrei-bung der Mod-elle und der
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 76--78
+\OT1/ptm/m/n/10 paar Meth-o-den vorgestellt, die in solchen F[]allen
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 76--78
+\OT1/ptm/m/n/10 Klasse NotePad ein In-ter-face NotePad und eine
  []
 
 
@@ -524,129 +524,70 @@ Underfull \hbox (badness 1292) in paragraph at lines 76--78
 \OT1/ptm/m/n/10 (Ab-bil-dung 1[]). NotePadImpl ist die Im-ple-men-
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no „ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
 
-Underfull \hbox (badness 6412) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 Pro-jekt we-icht nur von dem ur-sprnglichen
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+[]\OT1/ptm/m/n/10 Die Struk-tur des endg[]ultigen Quell-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 Code um die Pakete io.swagger.service,
- []
-
-
-Underfull \hbox (badness 4726) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 io.swagger.repository, io.swagger.configuration.
+\OT1/ptm/m/n/10 codes in diesem Pro-jekt we-icht nur von
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 hn-lich NotePadImpl in (Timo Greifen-berg
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 and Wort-mann, 2015b) sind die Klassen wie
+\OT1/ptm/m/n/10 dem ur-spr[]unglichen Code um die Pakete
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 File-Ser-vice, Fold-er-Ser-vice und UserSer-vice
+\OT1/ptm/m/n/10 io.swagger.service, io.swagger.repository,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 die Selb-st-geschriebe-nen Klassen, die nicht
- []
-
-
-Underfull \hbox (badness 1360) in paragraph at lines 81--82
-\OT1/ptm/m/n/10 berschrieben wer-den soll-ten. Dies er-fllt das
- []
-
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¶ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--84
 []\OT1/ptm/m/n/10 Die an-deren Klassen in io.swagger.api,
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¶ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
 <generation_gap.png, id=9, 412.54124pt x 134.75343pt>
 File: generation_gap.png Graphic file (type png)
  <use generation_gap.png>
 Package pdftex.def Info: generation_gap.png used on input line 94.
 (pdftex.def)             Requested size: 213.39566pt x 69.70413pt.
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
 
-Underfull \vbox (badness 4531) has occurred while \output is active []
+Underfull \hbox (badness 2762) in paragraph at lines 103--104
+\OT1/ptm/m/n/10 Rest-Service vor. Dieser ist in der Lage die
+ []
 
- [2 <./generation_gap.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+[2 <./generation_gap.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 W[]ahrend der En-twick-lung ist das Team auf
  []
 
 <interfaces.png, id=13, 1027.84pt x 819.06pt>
 File: interfaces.png Graphic file (type png)
  <use interfaces.png>
-Package pdftex.def Info: interfaces.png used on input line 120.
+Package pdftex.def Info: interfaces.png used on input line 121.
 (pdftex.def)             Requested size: 227.62204pt x 181.38104pt.
 
-Overfull \hbox (14.20761pt too wide) in paragraph at lines 120--121
+Overfull \hbox (14.20761pt too wide) in paragraph at lines 121--122
  [][] 
  []
 
-
-Underfull \hbox (badness 2080) in paragraph at lines 127--128
-\OT1/ptm/m/n/10 Nach En-twick-lern oder Or-gan-i-sa-tio-nen kann die
- []
-
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
 <paketstruktur.png, id=14, 536.0025pt x 918.43124pt>
 File: paketstruktur.png Graphic file (type png)
  <use paketstruktur.png>
-Package pdftex.def Info: paketstruktur.png used on input line 131.
+Package pdftex.def Info: paketstruktur.png used on input line 132.
 (pdftex.def)             Requested size: 227.62204pt x 390.02681pt.
 
-Overfull \hbox (14.20761pt too wide) in paragraph at lines 131--132
+Overfull \hbox (14.20761pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 138--140
+Underfull \hbox (badness 1237) in paragraph at lines 139--141
 \OT1/ptm/m/n/10 delete zur Verf[]ugung stellt. Die S3Transaction-
  []
 
@@ -668,19 +609,19 @@ Missing character: There is no ¶ in font ptmr7t!
 
 ] (./6_7_herval.aux) ) 
 Here is how much of TeX's memory you used:
- 3080 strings out of 494901
- 40873 string characters out of 6178617
- 100787 words of memory out of 5000000
- 6291 multiletter control sequences out of 15000+600000
+ 3081 strings out of 494901
+ 40881 string characters out of 6178617
+ 101787 words of memory out of 5000000
+ 6292 multiletter control sequences out of 15000+600000
  40359 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,6n,26p,809b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,26p,860b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.en
 c}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on 6_7_herval.pdf (4 pages, 284994 bytes).
+Output written on 6_7_herval.pdf (4 pages, 285391 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
