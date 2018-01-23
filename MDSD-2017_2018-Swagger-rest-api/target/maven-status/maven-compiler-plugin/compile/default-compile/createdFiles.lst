@@ -3,11 +3,11 @@ io/swagger/model/User_.class
 io/swagger/service/FileService.class
 io/swagger/api/ApiOriginFilter.class
 io/swagger/Swagger2SpringBoot$ExitException.class
-io/swagger/model/File.class
 io/swagger/configuration/HomeController.class
+io/swagger/model/File.class
 io/swagger/model/Folder_.class
-io/swagger/model/UserLogin.class
 io/swagger/model/FileEdit.class
+io/swagger/model/UserLogin.class
 io/swagger/api/ApiException.class
 io/swagger/api/UsersApi.class
 io/swagger/model/FolderCreate.class
@@ -19,8 +19,8 @@ io/swagger/service/UserService.class
 io/swagger/Swagger2SpringBoot.class
 io/swagger/api/ApiResponseMessage.class
 io/swagger/service/FolderService.class
-io/swagger/model/FileDelete.class
 io/swagger/api/NotFoundException.class
+io/swagger/model/FileDelete.class
 io/swagger/repository/FolderRepository.class
 io/swagger/model/User.class
 io/swagger/configuration/SwaggerDocumentationConfig.class
